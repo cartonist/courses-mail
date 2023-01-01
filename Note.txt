@@ -1,0 +1,37 @@
+初始化项目：
+1. npm create vite@latest saas
+2. npm i less -D
+3. npm i vue-router并配置路由  <!-- App组件为跟组件，项目首先访问"/"就是app.vue，之后会自动访问#/路由，即http://127.0.0.1:5174/#/ -->
+4. 初始化样式引入：src/assets/css/reset.css
+
+header组件的布局：
+header外框flex布局 主轴center --> div 1200px flex布局space-around --> 三个小div分别调节大小和布局
+
+// 异步组件
+import { defineAsyncComponent, ref } from 'vue'
+const NewGoodCourse = defineAsyncComponent(() => import('../components/home/NewGoodCourse.vue')) //这里的箭头函数是简写形式，所以import前面有一个return 
+
+//cryto-js插件
+用于封装解密和加密的方法
+
+//登录的逻辑：表单认证 -> 发送请求 获取token/获取失败提示 -> token存储到pinia + 本地存储
+
+//配置代理
+server: {
+    proxy: {
+      '/api': {                               //用于转发以http://localhost:5173/api开头的所有请求  
+        target: 'https://xuexiluxian.cn/',    //根路径替换项目根路径
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '')           // 对/api重写
+      }
+    }
+}
+
+获取用户信息需要发送将localStorage中的token传给后端。在axios二次封装在请求拦截器中设置 req.headers['Authorization'] = token 后端可以直接读取
+
+//关于下载文件
+一般是请求接口获取后端返回的blob文件流，const blob = new Blob()将文件存到当前页面，再创建a标签。
+如果前端直接通过URL，遇到jpg,pdf，txt等格式会进行预览而不是下载
+a标签的download属性--强制下载，但必须是同源请求才能生效，所以需要现在当前页面保存blob文件流。
+
+//关于视频播放，有vue3-video-play插件，其中有
