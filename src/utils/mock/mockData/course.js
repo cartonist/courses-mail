@@ -1039,7 +1039,7 @@ const playList = [
         children: [
           {
             id: 0,
-            playUrl: 'https://vali-ugc.cp31.ott.cibntv.net/6572A82474230714CF7AE29E2/03000A0100639C8FDA876198D094BB07C57C9A-D5CA-4866-A9CD-769FEECC44E1.mp4?ccode=0512&duration=48&expire=18000&psid=96236d591107dd789c25b0e5d4bb543441346&ups_client_netip=df49cbe6&ups_ts=1671423226&ups_userid=&utid=wT6fG9%2F8%2FVUCAXjnjSq6pEfU&vid=XNTkyOTQ2MzYyMA%3D%3D&vkey=Bf6ef6e70cd6cb24dc699016194935b4b&eo=0&t=55624f6b1b7198f&cug=1&fms=ae90896a8a685193&tr=48&le=df38c3c2d2b8a0de03f6f722e04a3df6&ckt=1&m_onoff=0&rid=2000000098A7E4AC0483FC90A9E7D257C097E51002000000&type=mp4sd&bc=2&dre=u145&si=607&dst=1'
+            playUrl: 'https://ak.picdn.net/shutterstock/videos/1081965617/preview/stock-footage-luxury-villa-with-swimming-pool-naples-florida-directly-above-ascending-view.mp4'
           },
           {
             id: 1,
